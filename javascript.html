@@ -1,0 +1,132 @@
+<html>
+    <title> Sample Form </title>
+    <head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script lang="javascript"> 
+        $(document).ready(function(){
+            $("button").click(function checkEmail() {  
+        var email = document.getElementById('txtEmail');  
+        var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;  
+        if (!filter.test(email.value)) {  
+            alert('Please provide a valid email address');  
+            email.focus;  
+            return false;  
+        }  });
+    });
+        </script>
+        <style>
+            .block {
+                display: block;
+              width: 10%;
+              
+              background-color: #4ca3af;
+              
+              padding: 14px 14px;
+              font-size: 16px;
+              cursor: grab;
+              text-align: center;
+              margin: auto;
+              justify-items: center;
+            }
+            .block{border-radius: 10px;
+            
+                }
+            
+            .block:hover {
+                background-color: #1c0edd;
+                 
+                }
+                
+                .bg
+                {
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                }
+
+                .blink {
+  animation: blink 1s infinite;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 50;
+    color: rgb(252, 252, 253);
+  }
+}
+    .txtColor{
+        color: rgb(252, 252, 252);
+        font-size:18;
+    }
+    ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: larger;
+
+}
+
+li {
+  display: inline;
+  padding: 10px;
+    
+}
+a{
+    color: rgb(254, 254, 255);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+a:hover{
+        color: red;
+}
+            </style>
+        </head>
+        <body background="Penguins.jpg" class="bg" style="text-align: center;">
+            <div>
+            <h1> <u> Form Filling Sample </u> </h1>
+            <br>
+            <br>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#news">News</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+              </ul>
+              <br>
+              <br>
+              
+            <div class="blink">
+                <marquee width="300"> ** HELLO AND WELCOME **  </marquee>
+                <br>
+                <br>
+            </div>
+            
+             <form name="myForm">
+                <br>
+             <b class="txtColor"> NAME : </b>  <input type="text" style="height:40px;font-size:14pt;">
+            <br>
+            <br>
+          
+            <b class="txtColor">EMAIL : </b> <input type="email" id="txtEmail" style="height:40px;font-size:14pt;"/>
+            <br>
+            <br>
+
+            <b class="txtColor">PASSWORD : </b> <input type="password" id="passWord" style="height:40px;font-size:14pt;"/>
+            <br>
+            <br>
+
+            <input type="button" value="SIGN UP" size="200px" class="block" onclick="checkEmail()"/>
+        </form>
+      
+            </div>
+        </div>
+         
+            </body>
+        
+</html>
+ 
+
+
+
